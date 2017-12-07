@@ -1,0 +1,177 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background: url('../img/secret-garden-1396019.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #98A06D;
+}
+
+a.btn,
+a.btn:visited,
+a.btn:hover {
+  color: #ddd;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-brand:hover {
+  color: #ddd;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #98A06D;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+   color: #BBC296;
+ }
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  color: #BBC296;
+}
+
+.dropdown-menu {
+  background-color: #4B5320;
+}
+
+.dropdown-menu > li > a {
+  color: #ddd;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #707941;
+  color: #ddd;
+}
+
+.page-header {
+  text-align: center;
+  border: none;
+}
+
+.row {
+  background-color: #111111;
+  color: #ddd;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.79);
+}
+
+.row.success {
+  background-color: #4B5320;
+}
+
+.row.failed {
+  background-color: darkred;
+}
+
+.input-group .form-control {
+  /*margin-top: 1em;
+  margin-bottom: 1em;*/
+  width: 5em;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td,
+.table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #222222;
+}
+
+.table-hover > tbody > tr:hover > td {
+  background-color: #333333;
+}
+
+.table > tbody > tr > td,
+.table > thead > tr > th {
+  border: none;
+}
+
+.modal-content {
+  background-color: #000;
+  color: #ddd;
+  border: 4px solid #222;
+}
+
+.close {
+  opacity: 1;
+}
+
+.close > span {
+  color: #ddd;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  /*height: 60px;*/
+  background-color: #111111;
+  color: #888;
+}
+
+@media (min-width: 970px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 900px) {
+  body {
+    background: none;
+  }
+}

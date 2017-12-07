@@ -1,0 +1,61 @@
+{% include 'header.html' %}
+
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="row success">
+                <div class="col-lg-12">
+                    {% for message in messages %}
+                    <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h1>Admin</h1>
+                <p class="lead">You have access to staff and material</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <a href="{{ url_for('staff') }}">
+                <img src="{{ url_for('static',filename='img/sniper-stance-1316625-1280x960.jpg') }}" class="img-responsive" alt="Soldier">
+                <h4>Staff</h4>
+            </a>
+            <p>See a list of all soldiers in employment. Here you can add new soldiers to your staff.</p>
+            <p>You can view each of them individually, and from there
+                book material, change classification, or remove them.</p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{{ url_for('material') }}">
+                <img src="{{ url_for('static',filename='img/we-re-at-war-1306070-640x480.jpg') }}" class="img-responsive" alt="Soldier">
+                <h4>Material</h4>
+            </a>
+            <p>See a list of all material in storage, and material which are already handed out to soldiers.</p>
+            <p>You can add new material or view each
+                material type individually. From there you can add or remove material of the same type.
+            </p>
+        </div>
+        <div class="col-lg-4">
+            {% if not 'LoggedIn' in session %}
+            <a href="{{ url_for('login') }}">
+                <img src="{{ url_for('static',filename='img/sealed-1240922-640x480.jpg') }}" class="img-responsive" alt="Soldier">
+                <h4>Login</h4>
+            </a>
+            <p>You need extra authorization to remove or add staff/material.</p>
+            {% else %}
+            <a href="{{ url_for('logout') }}">
+                <img src="{{ url_for('static',filename='img/sealed-1240922-640x480.jpg') }}" class="img-responsive" alt="Soldier">
+                <h4>Logout</h4>
+            </a>
+            <p>You're logged in. You can logout with the link above.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}
